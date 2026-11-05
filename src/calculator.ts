@@ -6,7 +6,7 @@ export function add(text: string): number {
     for (const item of parts){
         if (Number(item)<0){
             negativeNumbersList.push(item);
-        } else {
+        } else if (Number(item)<=1000){      
             sum=Number(item)+sum;
         }
     };
@@ -14,6 +14,5 @@ export function add(text: string): number {
     if (negativeNumbersList.length>0){
         throw new Error("negatives not allowed: " + negativeNumbersList.join(", "));
     }
-    q
     return sum;
 };

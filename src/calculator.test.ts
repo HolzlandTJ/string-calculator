@@ -4,6 +4,6 @@ import { add } from "./calculator";
 
 describe("add", () => {
   it("returns 0 for an empty string", () => {
-    expect(() => add("1,-2,-5")).toThrow("negatives not allowed: -2, -5")
+    expect(add("2,1001")).toBe(2);
   });
 });
