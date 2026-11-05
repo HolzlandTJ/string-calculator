@@ -1,9 +1,19 @@
 export function add(text: string): number {
-    const parts = text.split(",")
+    const parts = text.replaceAll("\n",",").split(",");
+    let negativeNumbersList: String[] = [];
     let sum = 0;
 
     for (const item of parts){
-        sum=Number(item)+sum;
+        if (Number(item)<0){
+            negativeNumbersList.push(item);
+        } else {
+            sum=Number(item)+sum;
+        }
     };
-    return sum; 
+
+    if (negativeNumbersList.length>0){
+        throw new Error("negatives not allowed: " + negativeNumbersList.join(", "));
+    }
+    q
+    return sum;
 };
