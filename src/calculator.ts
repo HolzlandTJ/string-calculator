@@ -1,4 +1,9 @@
 export function add(text: string): number {
-    
-    return Number(text.split(",")[0])+Number(text.split(",")[1]); 
+    const parts = text.split(",")
+    let sum = 0;
+
+    for (const item of parts){
+        sum=Number(item)+sum;
+    };
+    return sum; 
 };
