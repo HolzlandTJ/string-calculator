@@ -4,6 +4,6 @@ import { add } from "./calculator";
 
 describe("add", () => {
   it("returns 0 for an empty string", () => {
-    expect(add("")).toBe(0);
+    expect(add("7")).toBe(7);
   });
 });

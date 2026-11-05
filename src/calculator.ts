@@ -1,1 +1,3 @@
-export function add(text: string): number { return 0; };
+export function add(text: string): number {
+    return Number(text); 
+};
